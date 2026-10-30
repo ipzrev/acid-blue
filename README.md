@@ -1,17 +1,17 @@
-**ACID BLUE**
+ACIDBLUE
 
 Веб-синтезатор на Tone.js о холоде и тревоге. Два голоса: ACID — низкий гул, BLUE — звон стекла.
 
 &nbsp;
 
-**ГОЛОСА**
+Голоса
 
 ACID — Distortion → FeedbackDelay, канал слева\
 BLUE — Chorus → Reverb, канал справа
 
 &nbsp;
 
-**УПРАВЛЕНИЕ**
+Управление
 
 Wave, Attack, Sustain, Release, Volume — у каждого голоса\
 D H E G — ноты, Loop — повтор\
@@ -19,6 +19,6 @@ D H E G — ноты, Loop — повтор\
 
 &nbsp;
 
-**ЗАПУСК**
+Запуск
 
 Открыть index.html через Live Server.
