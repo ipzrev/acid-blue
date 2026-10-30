@@ -1,0 +1,5 @@
+# зависимости и служебные файлы редактора и системы
+node_modules/
+.vscode/
+.DS_Store
+Thumbs.db

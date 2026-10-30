@@ -1,0 +1,10 @@
+/* Шрифт заголовков ACID и BLUE.
+   block: пока файл грузится, текст невидим — без мелькания запасного шрифта.
+   Файл подгружается заранее через <link rel="preload"> в index.html */
+@font-face {
+  font-family: "Asfalt";
+  src: url("../fonts/ABCAsfaltCompressedTrial-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}

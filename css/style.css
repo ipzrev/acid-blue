@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #002aff;
+  --white: #ffffff;
+  --line: #d9d9d9;
+  --track: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ---------- Синтезатор: ровно 1440, по центру ---------- */
+
+.synth {
+  width: 1440px;
+  min-width: 1440px;
+  margin: 0 auto;
+  padding: 64px;
+}
+
+/* ---------- Шапка: ACID ——— BLUE ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__title {
+  font-family: "Asfalt", sans-serif;
+  font-size: 400px;
+  font-weight: 300;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-box: trim-both cap alphabetic;
+}
+
+.header__line {
+  flex: 1; /* растягивается между словами */
+  height: 1px;
+  background-color: var(--line);
+}
+
+/* ---------- Подписи и текст кнопок ---------- */
+
+.wave__label,
+.param__label,
+.wave__btn,
+.pads__loop,
+.pads__note {
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-box: trim-both cap alphabetic;
+}
+
+/* ---------- Кнопки 200 × 200 ---------- */
+
+.wave__btn,
+.pads__loop,
+.pads__note {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+}
+
+/* наведение и включено: блок белый, текст синий */
+.wave__btn:hover,
+.wave__btn.is-active,
+.pads__loop:hover,
+.pads__loop.is-active,
+.pads__note:hover,
+.pads__note.is-active {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+/* вспышка ноты на ударе лупа */
+.pads__note.is-hit {
+  opacity: 0.75;
+}
+
+/* ---------- Wave ---------- */
+
+.waves {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 128px;
+}
+
+.wave {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.wave__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 10px;
+}
+
+/* ---------- Слайдеры ---------- */
+
+.params {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 128px;
+}
+
+/* бегунок выше дорожки на 6 px, поэтому отступы по макету минус 6:
+   64 → 58 между слайдерами, 40 → 34 от подписи до дорожки */
+.params__col {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  width: 633px;
+}
+
+.param {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.param__slider {
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* дорожка 4 px */
+.param__slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background-color: var(--track);
+}
+
+.param__slider::-moz-range-track {
+  height: 4px;
+  background-color: var(--track);
+}
+
+/* бегунок — белый квадрат 16 px */
+.param__slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+  border: none;
+  border-radius: 0;
+  background-color: var(--white);
+}
+
+.param__slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 0;
+  background-color: var(--white);
+}
+
+/* ---------- Разделитель ---------- */
+
+/* 128 по макету минус 6 px выступа бегунка */
+.divider {
+  height: 1px;
+  margin: 122px 0 64px;
+  border: none;
+  background-color: var(--line);
+}
+
+/* ---------- Пэды: LOOP + D H E G ---------- */
+
+.pads {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pads__notes {
+  display: flex;
+  gap: 10px;
+}

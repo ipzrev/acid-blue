@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACID BLUE</title>
+
+    <link
+      rel="preload"
+      href="./fonts/ABCAsfaltCompressedTrial-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <main class="synth">
+      <!-- Шапка: ACID ——— BLUE -->
+      <h1 class="header">
+        <span class="header__title">Acid</span>
+        <span class="header__line"></span>
+        <span class="header__title">Blue</span>
+      </h1>
+
+      <!-- Форма волны: слева ACID, справа BLUE -->
+      <section class="waves">
+        <div class="wave" data-voice="acid">
+          <p class="wave__label">Wave</p>
+          <div class="wave__grid">
+            <button class="wave__btn is-active" type="button" data-wave="sine">Sine</button>
+            <button class="wave__btn" type="button" data-wave="square">Square</button>
+            <button class="wave__btn" type="button" data-wave="sawtooth">Sawtooth</button>
+            <button class="wave__btn" type="button" data-wave="triangle">Triangle</button>
+          </div>
+        </div>
+
+        <div class="wave" data-voice="blue">
+          <p class="wave__label">Wave</p>
+          <div class="wave__grid">
+            <button class="wave__btn is-active" type="button" data-wave="sine">Sine</button>
+            <button class="wave__btn" type="button" data-wave="square">Square</button>
+            <button class="wave__btn" type="button" data-wave="sawtooth">Sawtooth</button>
+            <button class="wave__btn" type="button" data-wave="triangle">Triangle</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Слайдеры: слева ACID, справа BLUE -->
+      <section class="params">
+        <div class="params__col" data-voice="acid">
+          <label class="param">
+            <span class="param__label">Attack</span>
+            <input class="param__slider" type="range" min="0" max="100" value="5" data-param="attack" />
+          </label>
+          <label class="param">
+            <span class="param__label">Sustain</span>
+            <input class="param__slider" type="range" min="0" max="100" value="53" data-param="sustain" />
+          </label>
+          <label class="param">
+            <span class="param__label">Release</span>
+            <input class="param__slider" type="range" min="0" max="100" value="53" data-param="release" />
+          </label>
+          <label class="param">
+            <span class="param__label">Volume</span>
+            <input class="param__slider" type="range" min="0" max="100" value="53" data-param="volume" />
+          </label>
+        </div>
+
+        <div class="params__col" data-voice="blue">
+          <label class="param">
+            <span class="param__label">Attack</span>
+            <input class="param__slider" type="range" min="0" max="100" value="5" data-param="attack" />
+          </label>
+          <label class="param">
+            <span class="param__label">Sustain</span>
+            <input class="param__slider" type="range" min="0" max="100" value="53" data-param="sustain" />
+          </label>
+          <label class="param">
+            <span class="param__label">Release</span>
+            <input class="param__slider" type="range" min="0" max="100" value="53" data-param="release" />
+          </label>
+          <label class="param">
+            <span class="param__label">Volume</span>
+            <input class="param__slider" type="range" min="0" max="100" value="53" data-param="volume" />
+          </label>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Пэды: LOOP слева, ноты D H E G справа -->
+      <section class="pads">
+        <button class="pads__loop" type="button">Loop</button>
+        <div class="pads__notes">
+          <button class="pads__note is-active" type="button" data-note="D">D</button>
+          <button class="pads__note" type="button" data-note="H">H</button>
+          <button class="pads__note" type="button" data-note="E">E</button>
+          <button class="pads__note" type="button" data-note="G">G</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
