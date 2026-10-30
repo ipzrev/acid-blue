@@ -1,36 +1,50 @@
-# ACID BLUE
+**ACID BLUE**
 
 Веб-синтезатор на Tone.js о холоде и тревоге. Низкий гул ACID звучит как сигнал тревоги, высокий звон BLUE — как стекло. Только синтез, без записанных звуков.
 
-- Синтезатор: [ссылка на GitHub Pages]
-- Скринкаст: [ссылка на видео]
+&nbsp;
 
-## Голоса
+**ССЫЛКИ**
 
-- **ACID** — синтезатор → Distortion → FeedbackDelay → канал слева
-- **BLUE** — синтезатор → Chorus → Reverb → канал справа
+- Синтезатор — [ссылка на GitHub Pages]
+- Скринкаст — [ссылка на видео]
+
+&nbsp;
+
+**ГОЛОСА**
+
+- ACID — синтезатор → Distortion → FeedbackDelay → канал слева
+- BLUE — синтезатор → Chorus → Reverb → канал справа
 - Оба канала → Limiter → выход
 
-## Управление
+&nbsp;
 
-- **Wave** — форма волны: sine, square, sawtooth, triangle
-- **Attack, Sustain, Release, Volume** — огибающая и громкость голоса
-- **D H E G** — ноты аккорда Em7, можно включать несколько сразу
-- **LOOP** — повторяет включённые ноты, 110 BPM
-- Клавиатура: D, H, E, G — ноты, пробел — LOOP
+**УПРАВЛЕНИЕ**
 
-## Структура
+- Wave — форма волны: sine, square, sawtooth, triangle
+- Attack, Sustain, Release, Volume — огибающая и громкость голоса
+- D H E G — ноты аккорда Em7, можно включать несколько сразу
+- Loop — повторяет включённые ноты, 110 BPM
+- Клавиатура — D, H, E, G включают ноты, пробел — Loop
 
-```
-index.html      разметка
-css/fonts.css   шрифт заголовков
-css/style.css   стили, нейминг по БЭМ
-js/script.js    звук и управление
-fonts/          ABC Asfalt Compressed
-```
+&nbsp;
 
-## Запуск
+**СТРУКТУРА**
 
-Открыть `index.html` через Live Server в VS Code. Tone.js подключается из CDN.
+- index.html — разметка
+- css/fonts.css — шрифт заголовков
+- css/style.css — стили, нейминг по БЭМ
+- js/script.js — звук и управление
+- fonts — ABC Asfalt Compressed
+
+&nbsp;
+
+**ЗАПУСК**
+
+Открыть синтезатор по ссылке выше и нажать любую кнопку — браузер включает звук только после клика.
+
+Локально — открыть index.html через Live Server в VS Code. Tone.js подключается из CDN, поэтому нужен интернет.
+
+---
 
 Пузырев Илия, 1 поток · 2026
